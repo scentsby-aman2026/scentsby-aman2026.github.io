@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="SCENTS by Aman — luxury fragrances crafted to leave an unforgettable impression. Discover ÑUFUZ.">
+<title>SCENTS by Aman | ÑUFUZ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080808;--panel:#111;--gold:#d7b56d;--gold2:#f1d89b;--text:#f7f3ea;--muted:#aaa398}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+header{position:fixed;top:0;width:100%;z-index:10;background:rgba(8,8,8,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(215,181,109,.16)}
+nav{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Cormorant Garamond",serif;font-size:30px;letter-spacing:2px;font-weight:700}
+.logo span{color:var(--gold)}
+nav .links{display:flex;gap:28px;font-size:13px;color:#d8d2c6}
+nav .links a:hover{color:var(--gold)}
+.hero{min-height:100vh;display:grid;place-items:center;padding:120px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(215,181,109,.16),transparent 68%);top:5%;right:-15%}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:5px;color:var(--gold);font-size:11px;margin-bottom:20px}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(60px,9vw,105px);line-height:.82;letter-spacing:4px}
+.hero h1 small{display:block;font-size:20px;letter-spacing:8px;margin:20px 0;color:#c8c0b2;font-family:Inter,sans-serif;font-weight:400}
+.hero p{color:var(--muted);max-width:530px;margin:25px 0;font-size:15px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 23px;border:1px solid var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:2px;transition:.25s}
+.btn.primary{background:var(--gold);color:#111}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(215,181,109,.15)}
+.visual{min-height:500px;display:grid;place-items:center;border:1px solid rgba(215,181,109,.18);background:linear-gradient(145deg,#151515,#080808);position:relative}
+.visual .bottle{width:180px;height:350px;border-radius:22px 22px 30px 30px;background:linear-gradient(90deg,#151515,#3b3020,#121212);box-shadow:0 30px 70px #000, inset 0 0 0 1px rgba(255,255,255,.08);position:relative}
+.cap{position:absolute;width:80px;height:65px;top:-55px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#1b1b1b,#8a6b38,#161616);border-radius:6px 6px 2px 2px}
+.label{position:absolute;left:18px;right:18px;top:120px;border:1px solid rgba(215,181,109,.75);padding:20px 8px;text-align:center}
+.label .ar{font-size:28px;color:var(--gold2);margin-bottom:8px}
+.label .en{font-family:"Cormorant Garamond",serif;font-size:25px;letter-spacing:4px}
+.label small{display:block;font-size:7px;letter-spacing:2px;color:#c9c1b4;margin-top:9px}
+section{padding:95px 0}
+.section-title{text-align:center;margin-bottom:48px}
+.section-title .eyebrow{margin-bottom:8px}
+h2{font-family:"Cormorant Garamond",serif;font-size:50px;font-weight:600}
+.about{background:#0d0d0d}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about p{color:var(--muted);margin:12px 0}
+.goldline{width:70px;height:1px;background:var(--gold);margin:25px 0}
+.product{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
+.product-card{min-height:560px;background:linear-gradient(145deg,#151515,#090909);border:1px solid rgba(215,181,109,.2);display:grid;place-items:center}
+.product-info .name{font-family:"Cormorant Garamond",serif;font-size:70px;letter-spacing:5px}
+.arabic{color:var(--gold);font-size:28px}
+.badge{display:inline-block;border:1px solid #6f5a35;padding:6px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);margin:15px 0}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.note{border:1px solid #252525;padding:17px;text-align:center;font-size:12px;color:#c9c1b4}
+.order{background:linear-gradient(135deg,#15120d,#0a0a0a);text-align:center;border-top:1px solid rgba(215,181,109,.15);border-bottom:1px solid rgba(215,181,109,.15)}
+.order p{color:var(--muted);max-width:600px;margin:12px auto 28px}
+footer{padding:40px 0;color:#777;font-size:12px;text-align:center}
+footer strong{color:#c8b27f}
+@media(max-width:760px){
+nav .links{display:none}.hero-grid,.about-grid,.product{grid-template-columns:1fr}.hero{padding-top:110px}.visual{min-height:430px}.product-card{min-height:450px}h2{font-size:42px}.product-info .name{font-size:55px}.notes{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header><div class="container"><nav>
+<a class="logo" href="#">SCENTS <span>by Aman</span></a>
+<div class="links"><a href="#story">Story</a><a href="#fragrance">Fragrance</a><a href="#order">Order</a></div>
+</nav></div></header>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">SCENTS by Aman · First Fragrance</div>
+<h1>ÑUFUZ<small>EXTRAIT DE PARFUM</small></h1>
+<p>A fragrance created to become part of your presence — refined, distinctive and made to leave an impression.</p>
+<div class="btns"><a class="btn primary" href="#fragrance">Discover ÑUFUZ</a><a class="btn" href="#order">Order Now</a></div>
+</div>
+<div class="visual" aria-label="ÑUFUZ product placeholder">
+<div class="bottle"><div class="cap"></div><div class="label"><div class="ar">نُفوذ</div><div class="en">ÑUFUZ</div><small>SCENTS BY AMAN</small></div></div>
+</div>
+</div>
+</section>
+
+<section id="story" class="about">
+<div class="container about-grid">
+<div><div class="eyebrow">The House</div><h2>Wear the presence.<br>Leave the memory.</h2><div class="goldline"></div></div>
+<div><p>SCENTS by Aman is built around one simple idea: fragrance should feel like an extension of who you are.</p><p>Our first creation, ÑUFUZ, is presented as an elegant Extrait de Parfum — designed for those who want their scent to be noticed, remembered and uniquely theirs.</p><p><em>Stay Fragrant, Stay You.</em></p></div>
+</div>
+</section>
+
+<section id="fragrance">
+<div class="container product">
+<div class="product-card"><div class="bottle"><div class="cap"></div><div class="label"><div class="ar">نُفوذ</div><div class="en">ÑUFUZ</div><small>SCENTS BY AMAN</small></div></div></div>
+<div class="product-info">
+<div class="eyebrow">First Release</div><div class="arabic">نُفوذ</div><div class="name">ÑUFUZ</div>
+<div class="badge">Extrait de Parfum · 50 ML</div>
+<p>Bold character, depth and a lasting signature. ÑUFUZ is crafted for evenings, occasions and everyday moments when you want your presence to speak before you do.</p>
+<div class="notes"><div class="note">Deep<br>Character</div><div class="note">Rich<br>Presence</div><div class="note">Long-Lasting<br>Signature</div></div>
+<p style="color:#d2c7b5;font-family:'Cormorant Garamond',serif;font-size:25px">“Be remembered by your scent.”</p>
+</div>
+</div>
+</section>
+
+<section id="order" class="order">
+<div class="container">
+<div class="eyebrow">Make it yours</div><h2>Ready to be remembered?</h2>
+<p>For orders, availability and fragrance details, contact SCENTS by Aman directly on WhatsApp.</p>
+<div class="btns" style="justify-content:center">
+<a class="btn primary" href="https://wa.me/923197646504" target="_blank" rel="noopener">Order on WhatsApp</a>
+<a class="btn" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+</div>
+</div>
+</section>
+</main>
+<footer><div class="container">© 2026 <strong>SCENTS by Aman</strong> · Stay Fragrant, Stay You.</div></footer>
+</body>
+</html>
